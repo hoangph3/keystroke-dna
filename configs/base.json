@@ -1,0 +1,26 @@
+{
+  "train": {
+    "learning_rate": 0.001,
+    "decay_steps": 10000,
+    "decay_rate": 0.98,
+    "buffer_size": 12345,
+    "epochs": 1000,
+    "batch_size": 64,
+    "checkpoint_dir": "./logs/x/checkpoints/"
+  },
+  "data": {
+    "train_path": "data/none_1000/train/",
+    "dev_path": "data/none_1000/train/",
+    "test_path": "data/none_1000/train/"
+  },
+  "model": {
+    "name": "inception_resnet_v2",
+    "embed_dims": 128,
+    "embed_norm": true,
+    "input_shape": [70, 5],
+    "margin": 1.0,
+    "scale": 32,
+    "num_classes": 10000,
+    "loss_fn": "triplet"
+  }
+}
